@@ -1,2 +1,2 @@
-# imc-website
-Website for insightmeditationcenter.org
+# Welcome to the repository for IMC's website!
+
