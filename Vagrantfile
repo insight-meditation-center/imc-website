@@ -76,7 +76,10 @@ Vagrant.configure(2) do |config|
       echo "Configuring Wordpress".
       sudo ln -s /usr/share/wordpress /var/www/html/wordpress
       sudo gzip -d /usr/share/doc/wordpress/examples/setup-mysql.gz
-      sudo bash /usr/share/doc/wordpress/examples/setup-mysql -n wordpress localhost
+      sudo bash /usr/share/doc/wordpress/examples/setup-mysql -n insightmeditationcenter.org localhost
+
+      sudo sed -i "s/DB_USER', 'wordpress/DB_USER', 'root/" /etc/wordpress/config-localhost.php
+
       sudo chown -R www-data /usr/share/wordpress
     SHELL
 end
