@@ -22,7 +22,7 @@ Vagrant.configure(2) do |config|
   # Create a forwarded port mapping which allows access to a specific port
   # within the machine from a port on the host machine. In the example below,
   # accessing "localhost:8080" will access port 80 on the guest machine.
-  # config.vm.network "forwarded_port", guest: 80, host: 8080
+  config.vm.network "forwarded_port", guest: 80, host: 8080
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
@@ -64,8 +64,19 @@ Vagrant.configure(2) do |config|
   # Enable provisioning with a shell script. Additional provisioners such as
   # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
   # documentation for more information about their specific syntax and use.
-  # config.vm.provision "shell", inline: <<-SHELL
-  #   sudo apt-get update
-  #   sudo apt-get install -y apache2
-  # SHELL
+    config.vm.provision "shell", inline: <<-SHELL
+      echo "Updating package database info."
+      sudo apt-get update
+
+      echo "Installing LAMP server and Wordpress."
+      sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password password password'
+      sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password password'
+      sudo apt-get -y install lamp-server^ wordpress
+
+      echo "Configuring Wordpress".
+      sudo ln -s /usr/share/wordpress /var/www/html/wordpress
+      sudo gzip -d /usr/share/doc/wordpress/examples/setup-mysql.gz
+      sudo bash /usr/share/doc/wordpress/examples/setup-mysql -n wordpress localhost
+      sudo chown -R www-data /usr/share/wordpress
+    SHELL
 end
