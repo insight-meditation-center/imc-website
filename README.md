@@ -8,5 +8,14 @@ IMC is a community-based urban meditation center for the practice of Vipassana o
 
 ## How can I contribute?
 
+We welcome anybody who would like to contribute. We use Github's [Pull Request Model](https://help.github.com/articles/using-pull-requests/) to manage contributions. When you have something you would like to contribute, just open a pull request and we'll work on getting it integrated.
+
+## How do I get started?
+
 Great question! 
 
+1. [Fork this repository](https://help.github.com/articles/fork-a-repo/).
+2. In your command line, type `vagrant up`.
+  * Note: this requires [Vagrant](http://vagrantup.com) to be installed. If you haven't installed it yet, please go to the [Vagrant](http://vagrantup.com) website and install it.
+  * [Vagrant](http://vagrantup.com) makes getting a development environment up and running much easier.
+3. Go to [http://localhost:8080/wordpress/](http://localhost:8080/wordpress/) in your browser. You should see the IMC website.
