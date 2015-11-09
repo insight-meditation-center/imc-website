@@ -69,17 +69,23 @@ Vagrant.configure(2) do |config|
       sudo apt-get update
 
       echo "Installing LAMP server and Wordpress."
-      sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password password password'
-      sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password password'
+      DB_USER="root"
+      DB_PASSWORD="password"
+      sudo debconf-set-selections <<< "mysql-server mysql-server/root_password password $DB_PASSWORD"
+      sudo debconf-set-selections <<< "mysql-server mysql-server/root_password_again password $DB_PASSWORD"
       sudo apt-get -y install lamp-server^ wordpress
 
       echo "Configuring Wordpress".
-      sudo ln -s /usr/share/wordpress /var/www/html/wordpress
-      sudo gzip -d /usr/share/doc/wordpress/examples/setup-mysql.gz
-      sudo bash /usr/share/doc/wordpress/examples/setup-mysql -n insightmeditationcenter.org localhost
+      sudo cp /usr/share/doc/wordpress/examples/setup-mysql.gz /tmp/setup-mysql.gz
+      sudo gzip -fd /tmp/setup-mysql.gz
 
-      sudo sed -i "s/DB_USER', 'wordpress/DB_USER', 'root/" /etc/wordpress/config-localhost.php
+      DB_NAME="imc_wordpress"
+      sudo sed -i '/echo "Enter MySQL password for user $DB_USER."$/d' /tmp/setup-mysql
+      sudo sed -i "s/read.*DB_PASSWORD/DB_PASSWORD='$DB_PASSWORD'/" /tmp/setup-mysql
+      sudo sed -i "s/\\(MYSQLCOMMAND=\\"mysql -u \\$DB_USER \\)\\(-p\\)\\( -h \\$DB_HOST\\)/\\1\\2$DB_PASSWORD\\3/" /tmp/setup-mysql
+      sudo bash /tmp/setup-mysql -n $DB_NAME -u $DB_USER localhost
+      sudo mysql -u$DB_USER -p$DB_PASSWORD $DB_NAME < /vagrant/imc-schema.sql
 
-      sudo chown -R www-data /usr/share/wordpress
+      sudo ln -sf /usr/share/wordpress /var/www/html/wordpress
     SHELL
 end
