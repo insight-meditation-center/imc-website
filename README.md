@@ -16,6 +16,7 @@ Great question!
 
 1. [Fork this repository](https://help.github.com/articles/fork-a-repo/).
 2. In your command line, type `vagrant up`.
-  * Note: this requires [Vagrant](http://vagrantup.com) to be installed. If you haven't installed it yet, please go to the [Vagrant](http://vagrantup.com) website and install it.
-  * [Vagrant](http://vagrantup.com) makes getting a development environment up and running much easier.
+  * Note: [Vagrant](http://vagrantup.com) must be installed. If it's not installed, please do the following:
+    1. Install [VirtualBox](https://www.virtualbox.org). VirtualBox is needed by Vagrant.
+    2. Install [Vagrant](http://vagrantup.com).  [Vagrant](http://vagrantup.com) makes getting a development environment up and running much easier.
 3. Go to [http://localhost:8080/wordpress/](http://localhost:8080/wordpress/) in your browser. You should see the IMC website.
