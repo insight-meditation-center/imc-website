@@ -12,7 +12,7 @@ Vagrant.configure(2) do |config|
 
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://atlas.hashicorp.com/search.
-  config.vm.box = "ubuntu/trusty64"
+  config.vm.box = "ubuntu/wily64"
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
@@ -75,17 +75,34 @@ Vagrant.configure(2) do |config|
       sudo debconf-set-selections <<< "mysql-server mysql-server/root_password_again password $DB_PASSWORD"
       sudo apt-get -y install lamp-server^ wordpress
 
-      echo "Configuring Wordpress".
+      echo "Configuring MySQL for Wordpress."
+      DB_NAME="imc_wordpress"
+
+      echo "CREATE DATABASE IF NOT EXISTS $DB_NAME" | mysql -u $DB_USER -p$DB_PASSWORD
+
       sudo cp /usr/share/doc/wordpress/examples/setup-mysql.gz /tmp/setup-mysql.gz
       sudo gzip -fd /tmp/setup-mysql.gz
 
-      DB_NAME="imc_wordpress"
       sudo sed -i '/echo "Enter MySQL password for user $DB_USER."$/d' /tmp/setup-mysql
       sudo sed -i "s/read.*DB_PASSWORD/DB_PASSWORD='$DB_PASSWORD'/" /tmp/setup-mysql
       sudo sed -i "s/\\(MYSQLCOMMAND=\\"mysql -u \\$DB_USER \\)\\(-p\\)\\( -h \\$DB_HOST\\)/\\1\\2$DB_PASSWORD\\3/" /tmp/setup-mysql
       sudo bash /tmp/setup-mysql -n $DB_NAME -u $DB_USER localhost
-      sudo mysql -u$DB_USER -p$DB_PASSWORD $DB_NAME < /vagrant/imc-schema.sql
 
-      sudo ln -sf /usr/share/wordpress /var/www/html/wordpress
+      # sudo mysql -u$DB_USER -p$DB_PASSWORD $DB_NAME < /vagrant/imc-schema.sql
+
+      # Load the seed database
+      mysql -u $DB_USER -p$DB_PASSWORD $DB_NAME < /vagrant/seed-db.sql
+
+      # Create a link to the IMC Wordpress theme.
+      ln -sf /vagrant/imc/ /srv/www/wp-content/localhost/themes/
+
+      echo "Setting up Apache."
+      cp /vagrant/000-default.conf /etc/apache2/sites-available/000-default.conf
+      a2enmod rewrite && a2enmod vhost_alias && /etc/init.d/apache2 restart
+      service apache2 restart
+
+      # Add upload file for the background image
+      mkdir -p /srv/www/wp-content/localhost/uploads/2016/01
+      cp /vagrant/imc/assets/images/ficus_religiosa.jpg /srv/www/wp-content/localhost/uploads/2016/01
     SHELL
 end
