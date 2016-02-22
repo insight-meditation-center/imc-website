@@ -101,8 +101,8 @@ Vagrant.configure(2) do |config|
       a2enmod rewrite && a2enmod vhost_alias && /etc/init.d/apache2 restart
       service apache2 restart
 
-      # Add upload file for the background image
-      mkdir -p /srv/www/wp-content/localhost/uploads/2016/01
-      cp /vagrant/imc/assets/images/ficus_religiosa.jpg /srv/www/wp-content/localhost/uploads/2016/01
+      echo "Adding upload file for the background image."
+      sudo -u www-data mkdir -p /srv/www/wp-content/localhost/uploads/2016/02
+      cp /vagrant/imc/assets/images/ficus_religiosa.jpg /srv/www/wp-content/localhost/uploads/2016/02
     SHELL
 end
