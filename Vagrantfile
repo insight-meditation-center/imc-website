@@ -88,8 +88,6 @@ Vagrant.configure(2) do |config|
       sudo sed -i "s/\\(MYSQLCOMMAND=\\"mysql -u \\$DB_USER \\)\\(-p\\)\\( -h \\$DB_HOST\\)/\\1\\2$DB_PASSWORD\\3/" /tmp/setup-mysql
       sudo bash /tmp/setup-mysql -n $DB_NAME -u $DB_USER localhost
 
-      # sudo mysql -u$DB_USER -p$DB_PASSWORD $DB_NAME < /vagrant/imc-schema.sql
-
       # Load the seed database
       mysql -u $DB_USER -p$DB_PASSWORD $DB_NAME < /vagrant/seed-db.sql
 
