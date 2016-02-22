@@ -21,11 +21,6 @@
 				} ?>
 			</div>
 		</div><!-- #footer-widgets -->
-		<div class="site-info container text-center">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'imc' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'imc' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'imc' ), 'imc', '<a href="http://underscores.me/" rel="designer">Underscores.me</a>' ); ?>
-		</div><!-- .site-info -->
 	</footer><!-- #footer -->
 	
 </div><!-- #page -->
