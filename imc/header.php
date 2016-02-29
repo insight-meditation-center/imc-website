@@ -49,7 +49,7 @@
 			</div>
 		</section><!-- #header-top -->
 		
-		<nav id="mainNav" class="navbar" role="navigation">
+		<nav id="mainNav" class="navbar navbar-default" role="navigation">
 			<div class="container">
 				<div class="row">
 				

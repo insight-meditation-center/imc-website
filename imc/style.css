@@ -124,10 +124,8 @@ h1, h2, h3, h4, h5, h6 {
 #mainNav .navbar-left > li > a {
 	font-family: 'Playfair Display', serif;
 }
-#mainNav .nav > li:hover > a,
 #mainNav .nav > li > a:active,
-#mainNav .nav > li > a:focus,
-#mainNav .nav > li > a:hover {
+#mainNav .nav > li > a:focus {
 	background-color: rgba(255,255,255,0.7);
 	color: #252525;
 	text-shadow: none;
