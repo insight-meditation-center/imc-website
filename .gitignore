@@ -7,3 +7,9 @@
 Session.vim
 .netrwhist
 *~
+
+# Ignore generated files
+imc/assets/css/bootstrap.css
+imc/assets/css/bootstrap-theme.css
+imc/assets/css/imc.css
+imc/assets/js/bootstrap.min.js

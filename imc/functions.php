@@ -137,6 +137,7 @@ function imc_scripts() {
 	wp_enqueue_style( 'imc-googlefone', '//fonts.googleapis.com/css?family=Playfair+Display:400,400italic,700,700italic,900,900italic');
 	wp_enqueue_style( 'imc-bootstrap', get_template_directory_uri() . '/assets/css/bootstrap.min.css');
 	wp_enqueue_style( 'imc-fontawesome', get_template_directory_uri() . '/assets/css/font-awesome.min.css');
+	wp_enqueue_style( 'imc-css', get_template_directory_uri() . '/assets/css/imc.css');
 	wp_enqueue_style( 'imc-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'imc-jquery', get_template_directory_uri() . '/assets/js/jquery-1.11.3.min.js', array(), '', false );

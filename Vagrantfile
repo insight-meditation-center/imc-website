@@ -43,13 +43,13 @@ Vagrant.configure(2) do |config|
   # backing providers for Vagrant. These expose provider-specific options.
   # Example for VirtualBox:
   #
-  # config.vm.provider "virtualbox" do |vb|
+  config.vm.provider "virtualbox" do |vb|
   #   # Display the VirtualBox GUI when booting the machine
   #   vb.gui = true
   #
   #   # Customize the amount of memory on the VM:
-  #   vb.memory = "1024"
-  # end
+    vb.memory = "1024"
+  end
   #
   # View the documentation for the provider you are using for more
   # information on available options.
@@ -102,5 +102,8 @@ Vagrant.configure(2) do |config|
       echo "Adding upload file for the background image."
       sudo -u www-data mkdir -p /srv/www/wp-content/localhost/uploads/2016/02
       cp /vagrant/imc/assets/images/ficus_religiosa.jpg /srv/www/wp-content/localhost/uploads/2016/02
+
+      echo "Installing dependencies needed for building assets."
+      apt-get install zlib1g-dev
     SHELL
 end
