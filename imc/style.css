@@ -42,10 +42,6 @@ body {
 	-o-background-size: cover;
 	font-size: 15px;
 }
-h1, h2, h3, h4, h5, h6 {
-	font-family: 'Playfair Display', serif;
-}
-
 
 #header {}
 
@@ -195,8 +191,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 #footer .widget {margin-top: 20px;}
 #home_widgets .widget .widget-title,
-#secondary .widget .widget-title,
-#footer .widget .widget-title {
+#secondary .widget .widget-title {
 	font-family: 'Playfair Display', serif;
 	margin-top: 0;
 	border-bottom: dotted 1px rgba(0,0,0,0.3);
