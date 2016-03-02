@@ -47,7 +47,7 @@ add_filter( 'comment_form_defaults', 'bootstrap3_comment_form' );
 function my_search_form( $form ) {
 	$form = '<form role="search" method="get" id="searchform" class="searchform" action="' . home_url( '/' ) . '" >
 	<div class="form-group"><label class="screen-reader-text" for="s">' . __( 'Search for:' ) . '</label>
-	<input type="text" value="' . get_search_query() . '" name="s" id="s" class="form-control" placeholder="Start Typing..." />
+	<input type="text" value="' . get_search_query() . '" name="s" id="s" class="form-control" placeholder="Search" />
 	<!--<input type="submit" id="searchsubmit" value="'. esc_attr__( 'Search' ) .'" />-->
 	</div>
 	</form>';
