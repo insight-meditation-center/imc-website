@@ -21,34 +21,29 @@
 </head>
 
 <body <?php body_class(); ?>>
+  <nav class="navbar navbar-mini">
+    <div class="container">
+      <?php wp_nav_menu( array(
+        'menu'              => 'top-nav',
+        'theme_location'    => 'top-nav',
+        'depth'             => 2,
+        'container'         => '',
+        'container_class'   => false,
+        'menu_class'        => 'nav navbar-nav navbar-right',
+        'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+        'walker'            => new wp_bootstrap_navwalker())
+      ); ?>
+
+      <form id="search" class="navbar-form navbar-right" role="search">
+        <div class="form-group has-feedback">
+          <input type="text" class="form-control" placeholder="Search">
+          <i class="glyphicon glyphicon-search form-control-feedback"></i>
+        </div>
+      </form>
+    </div>
+  </nav>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'imc' ); ?></a>
-
-	<header id="header" class="site-header" role="banner">
-		<section id="header-top" class="hidden-xs">
-			<div class="container">
-			
-				<nav id="top-nav">
-					<?php wp_nav_menu( array(
-						'menu'              => 'top-nav',
-						'theme_location'    => 'top-nav',
-						'depth'             => 2,
-						'container'         => '',
-						'container_class'   => false,
-						//'container_id'      => 'primary-menu-collapse',
-						'menu_class'        => 'nav nav-pills pull-right',
-						'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
-						'walker'            => new wp_bootstrap_navwalker())
-					); ?>
-				</nav>
-				
-				<div id="header-search" class="pull-right">
-					<?php get_search_form(); ?>
-				</div>
-					
-			</div>
-		</section><!-- #header-top -->
-		
 		<nav id="mainNav" class="navbar navbar-default" role="navigation">
 			<div class="container">
 				<div class="row">
