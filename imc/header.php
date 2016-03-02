@@ -42,64 +42,58 @@
       </form>
     </div>
   </nav>
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'imc' ); ?></a>
-		<nav id="mainNav" class="navbar navbar-default" role="navigation">
-			<div class="container">
-				<div class="row">
-				
-					<!-- Brand and toggle get grouped for better mobile display -->
-					<div class="navbar-header visible-xs">
-						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#primary-menu-collapse" aria-expanded="false">
-							<span class="sr-only">Toggle navigation</span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						</button>
-						
-						<h1 class="site-title navbar-brand">
-							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-								<?php if ( function_exists( 'ot_get_option' ) && ot_get_option( 'site_logo' ) ) { ?>
-									<img src="<?php echo ot_get_option( 'site_logo' ); ?>" height="64" alt="<?php bloginfo( 'name' ); ?>" title="<?php bloginfo( 'name' ); ?>">
-									<strong class="sr-only"><?php bloginfo( 'name' ); ?></strong>
-								<?php } else {
-									bloginfo( 'name' );
-								} ?>
-							</a>
-						</h1>
-						
-						<?php $description = get_bloginfo( 'description', 'display' );
-						if ( $description || is_customize_preview() ) : ?>
-							<p class="navbar-text sr-only"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-						<?php endif; ?>
-						
-					</div>
-					
-					<div id="primary-menu-collapse" class="collapse navbar-collapse">
-						<?php wp_nav_menu( array(
-							'menu'              => 'primary-left',
-							'theme_location'    => 'primary-left',
-							'depth'             => 2,
-							'container'         => false,
-							'menu_class'        => 'nav navbar-nav navbar-left',
-							'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
-							'walker'            => new wp_bootstrap_navwalker()
-						)); ?>
-						<?php wp_nav_menu( array(
-							'menu'              => 'primary-right',
-							'theme_location'    => 'primary-right',
-							'depth'             => 2,
-							'container'         => false,
-							'menu_class'        => 'nav navbar-nav navbar-right',
-							'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
-							'walker'            => new wp_bootstrap_navwalker()
-						)); ?>
-					</div>
-				
-				</div>
-			</div><!-- /.container -->
-		</nav> <!-- End Main Navigation -->
+  <nav id="mainNav" class="navbar navbar-default" role="navigation">
+    <div class="container">
+    
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header visible-xs">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#primary-menu-collapse" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        
+        <h1 class="site-title navbar-brand">
+          <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+            <?php if ( function_exists( 'ot_get_option' ) && ot_get_option( 'site_logo' ) ) { ?>
+              <img src="<?php echo ot_get_option( 'site_logo' ); ?>" height="64" alt="<?php bloginfo( 'name' ); ?>" title="<?php bloginfo( 'name' ); ?>">
+              <strong class="sr-only"><?php bloginfo( 'name' ); ?></strong>
+            <?php } else {
+              bloginfo( 'name' );
+            } ?>
+          </a>
+        </h1>
+        
+        <?php $description = get_bloginfo( 'description', 'display' );
+        if ( $description || is_customize_preview() ) : ?>
+          <p class="navbar-text sr-only"><?php echo $description; /* WPCS: xss ok. */ ?></p>
+        <?php endif; ?>
+        
+      </div>
+      
+      <div id="primary-menu-collapse" class="collapse navbar-collapse">
+        <?php wp_nav_menu( array(
+          'menu'              => 'primary-left',
+          'theme_location'    => 'primary-left',
+          'depth'             => 2,
+          'container'         => false,
+          'menu_class'        => 'nav navbar-nav navbar-left',
+          'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+          'walker'            => new wp_bootstrap_navwalker()
+        )); ?>
+        <?php wp_nav_menu( array(
+          'menu'              => 'primary-right',
+          'theme_location'    => 'primary-right',
+          'depth'             => 2,
+          'container'         => false,
+          'menu_class'        => 'nav navbar-nav navbar-right',
+          'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+          'walker'            => new wp_bootstrap_navwalker()
+        )); ?>
+      </div>
+    
+    </div><!-- /.container -->
+  </nav> <!-- End Main Navigation -->
 		
-	</header><!-- #header -->
-
 	<div id="content" class="site-content">

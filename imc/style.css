@@ -93,13 +93,6 @@ body {
 }
 
 
-#mainNav {
-    border-radius: 0;
-    border: none;
-    background: transparent;
-    color: #ffffff;
-	margin-top: 18px;
-}
 #mainNav .navbar-brand {margin: 0}
 #mainNav .navbar-brand a {
 	color: #ffffff;
@@ -109,8 +102,6 @@ body {
 	color: #cccccc;
 	color: rgba(255,255,255,0.75);
 }
-#mainNav .nav {}
-#mainNav .nav li {}
 #mainNav .nav > li > a {
 	font-size: large;
 	color: #ffffff;
@@ -140,9 +131,6 @@ body {
 #mainNav .navbar-toggle:hover {
     background-color: rgba(0,0,0,0.75);
 }
-#mainNav .navbar-collapse {}
-
-
 
 #primary.well, #home_widgets .well {
     background-color: rgba(255,255,255,0.8);
@@ -576,8 +564,3 @@ object {
 	display: block;
 }
 
-
-
-@media (min-width:768px) {
-	.navbar-left {margin-left: -15px;}
-}
