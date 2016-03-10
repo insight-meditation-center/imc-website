@@ -122,7 +122,7 @@ function imc_widgets_init() {
 		'name'          => esc_html__( 'Footer', 'imc' ),
 		'id'            => 'footer_widgets',
 		'description'   => '',
-		'before_widget' => '<div id="%1$s" class="widget col-md-3 col-sm-6 %2$s">',
+		'before_widget' => '<div id="%1$s" class="widget col-md-2 col-sm-6 %2$s">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h4 class="widget-title">',
 		'after_title'   => '</h4>',
