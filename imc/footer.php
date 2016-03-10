@@ -23,11 +23,6 @@
 	
 </div><!-- #page -->
 
-<a href="#header" id="toTop" class="btn btn-primary" data-toggle="tooltip" data-placement="left" title="Go to Top">
-	<span class="fa fa-arrow-up"></span>
-	<strong class="sr-only">Top</strong>
-</a>
-
 <?php wp_footer(); ?>
 
 </body>
