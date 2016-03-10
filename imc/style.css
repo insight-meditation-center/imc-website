@@ -102,11 +102,6 @@ body {
 	color: #cccccc;
 	color: rgba(255,255,255,0.75);
 }
-#mainNav .nav > li > a {
-	font-size: large;
-	color: #ffffff;
-	text-shadow: 0 1px 1px rgba(0,0,0,0.4);
-}
 #mainNav .navbar-left > li > a {
 	font-family: 'Playfair Display', serif;
 }
