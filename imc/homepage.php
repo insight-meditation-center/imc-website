@@ -15,7 +15,7 @@
 
 get_header(); ?>
 
-	<section id="primary" class="content-area container">
+	<div class="jumbotron container">
 		<div class="row">
 		
 			<main id="main" class="site-main col-md-12" role="main">
@@ -31,6 +31,6 @@ get_header(); ?>
 			</main><!-- #main -->
 		
 		</div>
-	</section><!-- #primary -->
+	</div><!-- .jumbotron.container -->
 
 <?php get_footer(); ?>

@@ -11,8 +11,6 @@
 
 ?>
 
-	</div><!-- #content -->
-
 	<footer id="footer" class="site-footer" role="contentinfo">
 		<div id="footer-widgets" class="container">
 			<div class="row">

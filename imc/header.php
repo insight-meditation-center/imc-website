@@ -96,4 +96,3 @@
     </div><!-- /.container -->
   </nav> <!-- End Main Navigation -->
 		
-	<div id="content" class="site-content">
