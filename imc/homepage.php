@@ -15,22 +15,30 @@
 
 get_header(); ?>
 
-	<div class="jumbotron container">
-		<div class="row">
-		
-			<main id="main" class="site-main col-md-12" role="main">
-
-				<?php
-				while ( have_posts() ) : the_post();
-
-					get_template_part( 'template-parts/content', 'home' );
-
-				endwhile; // End of the loop.
-				?>
-
-			</main><!-- #main -->
-		
-		</div>
-	</div><!-- .jumbotron.container -->
+  <div id="heroCarousel" class="carousel slide" data-ride="carousel">
+    <?php $pics = array('bodhi-leaf', 'bronze-buddha-hand', 'many-thai-buddhas', 'stream-with-trees', 'three-bodhi-leaves') ?>
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <?php foreach($pics as $index => $pic): ?>
+        <li data-target="#heroCarousel" data-slide-to="<?= $index ?>"<?= $index == 0 ? ' class=active' : '' ?>></li>
+      <?php endforeach ?>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+      <?php foreach($pics as $index => $pic): ?>
+        <div class="item<?= $index == 0 ? ' active' : '' ?>">
+        <img class="first-slide" src="<?= get_image_path()  ?>/carousel/<?= $pic ?>.jpg" alt="Slide <?= $index ?>">
+          <div class="container">
+            <div class="carousel-caption">
+              <pre>Don't chase the past
+      Or long for the future.
+  The past is behind;
+      The future is not yet reached.
+          The Buddha</pre>
+            </div>
+          </div>
+        </div><!-- /.item -->
+      <?php endforeach ?>
+    </div><!-- /.carousel-inner -->
+  </div><!-- /.carousel -->
 
 <?php get_footer(); ?>

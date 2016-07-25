@@ -21,73 +21,44 @@
 </head>
 
 <body <?php body_class(); ?>>
-  <nav class="navbar navbar-mini">
+  <nav class="navbar navbar-default navbar-top">
     <div class="container">
-      <?php wp_nav_menu( array(
-        'menu'              => 'top-nav',
-        'theme_location'    => 'top-nav',
-        'depth'             => 2,
-        'container'         => '',
-        'container_class'   => false,
-        'menu_class'        => 'nav navbar-nav navbar-right',
-        'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
-        'walker'            => new wp_bootstrap_navwalker())
-      ); ?>
-
-      <form id="search" class="navbar-form navbar-right" role="search">
-        <div class="form-group has-feedback">
-          <input type="text" class="form-control" placeholder="Search">
-          <i class="glyphicon glyphicon-search form-control-feedback"></i>
-        </div>
-      </form>
-    </div>
-  </nav>
-  <nav id="mainNav" class="navbar navbar-default" role="navigation">
-    <div class="container">
-    
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header visible-xs">
+      <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#primary-menu-collapse" aria-expanded="false">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        
-        <h1 class="site-title navbar-brand">
-          <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-            <?php if ( function_exists( 'ot_get_option' ) && ot_get_option( 'site_logo' ) ) { ?>
-              <img src="<?php echo ot_get_option( 'site_logo' ); ?>" height="64" alt="<?php bloginfo( 'name' ); ?>" title="<?php bloginfo( 'name' ); ?>">
-              <strong class="sr-only"><?php bloginfo( 'name' ); ?></strong>
-            <?php } else {
-              bloginfo( 'name' );
-            } ?>
-          </a>
-        </h1>
-        
-        <?php $description = get_bloginfo( 'description', 'display' );
-        if ( $description || is_customize_preview() ) : ?>
-          <p class="navbar-text sr-only"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-        <?php endif; ?>
-        
+        <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo('name') ?></a>
       </div>
-      
+
+			<div class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#">Sign In</a></li>
+				</ul>
+				<form class="navbar-form navbar-right" role="search">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Search">
+					</div>
+				</form>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#">Insight Retreat Center</a></li>
+					<li><a href="#">Audio Dharma</a></li>
+				</ul>
+			</div><!-- /.navbar-collapse -->
+
+    </div>
+  </nav>
+  <nav id="mainNav" class="navbar">
+    <div class="container">
       <div id="primary-menu-collapse" class="collapse navbar-collapse">
-        <?php wp_nav_menu( array(
-          'menu'              => 'primary-left',
-          'theme_location'    => 'primary-left',
-          'depth'             => 2,
-          'container'         => false,
-          'menu_class'        => 'nav navbar-nav navbar-left',
-          'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
-          'walker'            => new wp_bootstrap_navwalker()
-        )); ?>
         <?php wp_nav_menu( array(
           'menu'              => 'primary-right',
           'theme_location'    => 'primary-right',
           'depth'             => 2,
           'container'         => false,
-          'menu_class'        => 'nav navbar-nav navbar-right',
+          'menu_class'        => 'nav nav-justified',
           'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
           'walker'            => new wp_bootstrap_navwalker()
         )); ?>

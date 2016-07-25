@@ -72,12 +72,6 @@ function imc_setup() {
 		'quote',
 		'link',
 	) );
-
-	// Set up the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'imc_custom_background_args', array(
-		'default-color' => 'ffffff',
-		'default-image' => '',
-	) ) );
 }
 endif;
 add_action( 'after_setup_theme', 'imc_setup' );
@@ -134,8 +128,8 @@ add_action( 'widgets_init', 'imc_widgets_init' );
  * Enqueue scripts and styles.
  */
 function imc_scripts() {
-	wp_enqueue_style( 'imc-googlefone', '//fonts.googleapis.com/css?family=Playfair+Display:400,400italic,700,700italic,900,900italic');
-	wp_enqueue_style( 'imc-bootstrap', get_template_directory_uri() . '/assets/css/bootstrap.min.css');
+	wp_enqueue_style( 'imc-googlefont', '//fonts.googleapis.com/css?family=Hind:700');
+	wp_enqueue_style( 'imc-bootstrap', get_template_directory_uri() . '/assets/css/bootstrap.css');
 	wp_enqueue_style( 'imc-fontawesome', get_template_directory_uri() . '/assets/css/font-awesome.min.css');
 	wp_enqueue_style( 'imc-css', get_template_directory_uri() . '/assets/css/imc.css');
 	wp_enqueue_style( 'imc-style', get_stylesheet_uri() );
@@ -208,10 +202,7 @@ function article_first_image() {
 	endif;
 }
 
-
-// Changing Continue Reading Text
-function modify_read_more_link() {
-	return '<a class="btn btn-sm btn-default more-link" href="' . get_permalink() . '">Continue <span class="glyphicon glyphicon-chevron-right"></span></a>';
+function get_image_path() {
+  return (get_bloginfo('template_directory', 'display').'/assets/images');
 }
-add_filter( 'the_content_more_link', 'modify_read_more_link' );
 
