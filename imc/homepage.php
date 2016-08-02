@@ -16,7 +16,7 @@
 get_header(); ?>
 
   <div id="heroCarousel" class="carousel slide" data-ride="carousel">
-    <?php $pics = array('bodhi-leaf', 'bronze-buddha-hand', 'many-thai-buddhas', 'stream-with-trees', 'three-bodhi-leaves') ?>
+    <?php $pics = array('bodhi-leaf') //, 'bronze-buddha-hand', 'many-thai-buddhas', 'stream-with-trees', 'three-bodhi-leaves') ?>
     <!-- Indicators -->
     <ol class="carousel-indicators">
       <?php foreach($pics as $index => $pic): ?>
@@ -32,8 +32,8 @@ get_header(); ?>
               <pre>Don't chase the past
       Or long for the future.
   The past is behind;
-      The future is not yet reached.
-          The Buddha</pre>
+      The future is not yet reached.</pre>
+<b>The Buddha</b>
             </div>
           </div>
         </div><!-- /.item -->
@@ -44,7 +44,7 @@ get_header(); ?>
   <div class="container">
     <div class="row">
       <div class="col-md-4">
-        <h4>Everyone Welcome <a class="small" href="#">(more)</a></h4>
+        <h4>Everyone Welcome <a class="small" href="#">(learn more)</a></h4>
         <img class="img-responsive" alt="Buddha smiling" src="<?= get_image_path() ?>/buddha-smile.jpg" />
       </div><!-- /.col-md-4 -->
       <div class="col-md-4">
