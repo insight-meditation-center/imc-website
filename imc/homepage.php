@@ -16,7 +16,7 @@
 get_header(); ?>
 
   <div id="heroCarousel" class="carousel slide" data-ride="carousel">
-    <?php $pics = array('bodhi-leaf') //, 'bronze-buddha-hand', 'many-thai-buddhas', 'stream-with-trees', 'three-bodhi-leaves') ?>
+    <?php $pics = array('bodhi-leaf', 'bronze-buddha-hand', 'many-thai-buddhas', 'stream-with-trees', 'three-bodhi-leaves') ?>
     <!-- Indicators -->
     <ol class="carousel-indicators">
       <?php foreach($pics as $index => $pic): ?>
