@@ -206,3 +206,6 @@ function get_image_path() {
   return (get_bloginfo('template_directory', 'display').'/assets/images');
 }
 
+function read_svg_file($filename) {
+  readfile("assets/images/$filename.svg", true);
+}

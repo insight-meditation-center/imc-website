@@ -15,12 +15,13 @@
 
 get_header(); ?>
 
-  <div id="heroCarousel" class="carousel slide" data-ride="carousel">
+  <div id="heroCarousel" class="carousel slide" data-ride="carousel" data-interval="30000">
     <?php $pics = array('bodhi-leaf', 'bronze-buddha-hand', 'many-thai-buddhas', 'stream-with-trees', 'three-bodhi-leaves') ?>
+    <?php $start = intval(date('H')) % sizeof($pics) ?>
     <!-- Indicators -->
     <ol class="carousel-indicators">
       <?php foreach($pics as $index => $pic): ?>
-        <li data-target="#heroCarousel" data-slide-to="<?= $index ?>"<?= $index == 0 ? ' class=active' : '' ?>></li>
+        <li data-target="#heroCarousel" data-slide-to="<?= $index ?>"<?= $index == $start ? ' class=active' : '' ?>></li>
       <?php endforeach ?>
     </ol>
     <div class="carousel-inner" role="listbox">
@@ -44,8 +45,8 @@ get_header(); ?>
   <div class="container">
     <div class="row">
       <div class="col-md-4">
-        <h4>Everyone Welcome <a class="small" href="#">(learn more)</a></h4>
-        <img class="img-responsive" alt="Buddha smiling" src="<?= get_image_path() ?>/buddha-smile.jpg" />
+        <h4>Everyone Welcome <a class="small" href="#learnmore">(learn more)</a></h4>
+        <img class="img-responsive" alt="Buddha smiling" src="<?= get_image_path() ?>/gils-buddha.jpg" />
       </div><!-- /.col-md-4 -->
       <div class="col-md-4">
         <h4>Noteworthy:</h4>
@@ -56,10 +57,18 @@ get_header(); ?>
           <li><a href="#">A Call for IMC and IRC photos</a></li>
           <li><a href="#">Eightfold Path Program starts in Oct.</a></li>
         </ul>
+        <h4>Recent talks:</h4>
+        <ul>
+          <li><a href="#">Aug 4: Andrea Fella - Patience</a></li>
+          <li><a href="#">Aug 1: Gil Fronsdal - Mindfulness of Body</a></li>
+          <li><a href="#">Jul 31: Gil Fronsdal - Mindfulness Cultivates Ethical Virtue</a></li>
+          <li><a href="#">Jul 20: Gil Fronsdal - Dharmette: Content vs process</a></li>
+          <li><a href="#">Jul 20: Gil Fronsdal - Practice notes: Thinking as Scenery</a></li>
+        </ul>
       </div><!-- /.col-md-4 -->
       <div class="col-md-4">
         <h4 class="calendar">Calendar <a class="small" href="#">(see complete calendar)</a></h4>
-        <iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=AGENDA&amp;height=400&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=imc.events.mgs%40gmail.com&amp;src=6fi0sc1ud24qjof96vc5kvmtd8%40group.calendar.google.com&amp;color=%232952A3&amp;ctz=America%2FLos_Angeles" style=" border-width:0 " scrolling="no" frameborder="0" height="300" width="!00%"></iframe>
+        <iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=AGENDA&amp;height=400&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=imc.events.mgs%40gmail.com&amp;src=6fi0sc1ud24qjof96vc5kvmtd8%40group.calendar.google.com&amp;color=%232952A3&amp;ctz=America%2FLos_Angeles" style=" border-width:0 " scrolling="no" frameborder="0" height="400" width="!00%"></iframe>
       </div><!-- /.col-md-4 -->
     </div><!-- /.row -->
     <div class="row">
@@ -106,6 +115,11 @@ get_header(); ?>
           <li><a href="#">Bibliodharma: Reading the Dharma</a></li>
         </ul>     </div><!-- /.col-md-4 -->
     </div><!-- /.row -->
+    <div class="row">
+      <div id="learnmore" class="col-md-10 col-md-offset-1">
+        <h4>We welcome equally people of all cultural, ethnic, and religious backgrounds, racial identities, socio-economic class, sexual orientation, gender identity, age, education, and physical ability.</h4>
+      </div>
+    </div>
   </div><!-- /.container -->
 
 <?php get_footer(); ?>
