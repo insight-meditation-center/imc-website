@@ -14,10 +14,10 @@
 	<footer id="footer" class="site-footer" role="contentinfo">
     <div class="container">
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-2 col-md-offset-1">
           Connect with IMC:
         </div><!-- /.col-md-4 -->
-        <div class="col-md-8">
+        <div class="col-md-7">
           <ul class="list-inline">
             <?php $elems = ['Podcast'    => 'linea/basic_ipod',
                             'Facebook'   => 'facebook',
@@ -39,7 +39,27 @@
 				<?php if ( function_exists('dynamic_sidebar') ) {
 					dynamic_sidebar( 'footer_widgets' );
 				} ?>
-			</div>
+        <div id="nav_menu-10" class="widget col-md-2 col-sm-6 widget_nav_menu">
+        <h4 class="widget-title"><?= read_svg_file('linea/basic_geolocalize-05') ?> Address</h4>
+          <address class="menu-footer-address-container">
+            <ul id="menu-footer-address" class="menu">
+              <li id="menu-item-63" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-63">
+                <a target="_blank" href="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=108+Birch+St,+Redwood+City,+CA+94062+(Insight+Meditation+Center)&amp;sll=37.0625,-95.677068&amp;sspn=43.443045,77.167969&amp;ie=UTF8&amp;t=h&amp;z=16">108 Birch Street Redwood City, California 94062</a>
+              </li>
+              <li id="menu-item-64" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-64">
+                <a href="tel:6505993456">(650) 599-3456</a>
+              </li>
+            </ul>
+          </address>
+          <h4 class="widget-title">License</h4>
+          <div class="menu-footer-license-container">
+            <ul id="menu-footer-license" class="menu">
+              <li id="menu-item-65" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-65">
+                <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-Noncommercial-No Derivative Works 3.0</a></li>
+            </ul>
+          </div>
+        </div><!-- #nav_menu-10 -->
+			</div><!-- .row -->
 		</div><!-- #footer-widgets -->
 	</footer><!-- #footer -->
 	
