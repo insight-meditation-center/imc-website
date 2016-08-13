@@ -21,10 +21,10 @@
   $sidebar.affix({
     offset: {
       top: function() {
-        return (this.top = $sidebar.offset().top);
+        return (this.top = $sidebar.offset().top - parseInt($sidebar.css('margin-top'), 10));
       },
       bottom: function() {
-        return (this.bottom = $('#footer').outerHeight(true));
+        return (this.bottom = $('#footer').outerHeight(true) + parseInt($sidebar.css('margin-bottom'), 10));
       }
     }
   });
