@@ -14,29 +14,58 @@
 
 get_header(); ?>
 
-	<section id="primary" class="content-area container well">
+	<div class="container">
 		<div class="row">
-		
+
+      <div class="col-md-3" role="complementary">
+        <nav class="sidebar">
+          <ul class="list-unstyled">
+            <li class="active">
+              <a href="#nocostnoregistration">No Cost - No Registration</a>
+            </li>
+            <li>
+              <a href="#programsforbeginners">Programs for Beginners</a>
+            </li>
+            <li>
+              <a href="#daylongmeditationretreats">Daylong Meditation Retreats</a>
+            </li>
+            <li>
+              <a href="#daylongteachings">Daylong Teachings</a>
+            </li>
+            <li>
+              <a href="#yearlongtrainings">Year-long Trainings</a>
+            </li>
+            <li>
+              <a href="#nonresidentialretreats">Non-residential retreats</a>
+            </li>
+            <li>
+              <a href="#residentialretreats">Residential Retreats</a>
+            </li>
+            <li>
+              <a href="#youthandfamilyprograms">Youth and Family Programs</a>
+            </li>
+            <li>
+              <a href="#saticenter">Sati Center</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
 			<main id="main" class="site-main col-md-9 col-sm-8" role="main">
+
+        <?php get_sidebar(); ?>
 
 				<?php
 				while ( have_posts() ) : the_post();
 
 					get_template_part( 'template-parts/content', 'page' );
 
-					// If comments are open or we have at least one comment, load up the comment template.
-					if ( comments_open() || get_comments_number() ) :
-						comments_template();
-					endif;
-
 				endwhile; // End of the loop.
 				?>
 
 			</main><!-- #main -->
 			
-			<?php get_sidebar(); ?>
-		
-		</div>
-	</section><!-- #primary -->
+		</div><!-- /.row -->
+	</div><!-- /.container-fluid -->
 
 <?php get_footer(); ?>
