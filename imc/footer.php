@@ -19,15 +19,17 @@
         </div><!-- /.col-md-4 -->
         <div class="col-md-7">
           <ul class="list-inline">
-            <?php $elems = ['Podcast'    => 'linea/basic_ipod',
-                            'Facebook'   => 'facebook',
-                            'Email List' => 'linea/basic_mail_multiple',
-                            'Newsletter' => 'linea/basic_spread_text',
-                            'RSS'        => 'linea/basic_rss'] ?>
-            <?php foreach($elems as $text => $icon): ?>
+            <?php $elems = ['Podcast'    => ['linea/basic_ipod', 'http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewPodcast?id=75519213'],
+                            'Facebook'   => ['facebook', 'http://www.facebook.com/insightmeditationcenter'],
+                            'Email List' => ['linea/basic_mail_multiple', 'http://insightmeditationcenter.us1.list-manage.com/subscribe?u=173a7e720925d7c5362caa7dd&id=fc71dfa9fb'],
+                            'Newsletter' => ['linea/basic_spread_text', 'http://www.insightmeditationcenter.org/books-articles/newsletter/'],
+                            'RSS'        => ['linea/basic_rss', 'http://feeds.feedburner.com/InsightMeditationCenter']] ?>
+            <?php foreach($elems as $text => $spec): ?>
               <li>
-                <?= read_svg_file($icon) ?>
-                <?= $text ?>
+                <a href="<?= $spec[1] ?>">
+                  <?= read_svg_file($spec[0]) ?>
+                  <?= $text ?>
+                </a>
               </li>
             <?php endforeach ?>
           </ul>
