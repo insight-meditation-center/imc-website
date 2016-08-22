@@ -14,10 +14,7 @@
 	<footer id="footer" class="site-footer" role="contentinfo">
     <div class="container">
       <div class="row">
-        <div class="col-md-2 col-md-offset-1">
-          Connect with IMC:
-        </div><!-- /.col-md-4 -->
-        <div class="col-md-7">
+        <div class="col-md-7 col-md-offset-3">
           <ul class="list-inline">
             <?php $elems = ['Podcast'    => ['linea/basic_ipod', 'http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewPodcast?id=75519213'],
                             'Facebook'   => ['facebook', 'http://www.facebook.com/insightmeditationcenter'],
@@ -42,7 +39,7 @@
 					dynamic_sidebar( 'footer_widgets' );
 				} ?>
         <div id="nav_menu-10" class="widget col-md-2 col-sm-6 widget_nav_menu">
-        <h4 class="widget-title"><?= read_svg_file('linea/basic_geolocalize-05') ?> Address</h4>
+        <h4 class="widget-title"><?= read_svg_file('linea/basic_signs') ?> Address</h4>
           <address class="menu-footer-address-container">
             <ul id="menu-footer-address" class="menu">
               <li id="menu-item-63" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-63">
