@@ -206,6 +206,10 @@ function get_image_path() {
   return (get_bloginfo('template_directory', 'display').'/assets/images');
 }
 
-function read_svg_file($filename) {
-  readfile("assets/images/$filename.svg", true);
+function read_svg_file($filename, $classes = []) {
+  $svg = simplexml_load_string(file_get_contents("assets/images/$filename.svg", true));
+  if (!empty($classes)) {
+    $svg->addAttribute('class', join($classes));
+  }
+  return $svg->asXML();
 }

@@ -16,7 +16,7 @@
 get_header(); ?>
 
   <div id="heroCarousel" class="carousel slide" data-ride="carousel" data-interval="30000">
-    <?php $pics = array('bodhi-leaf', 'bronze-buddha-hand', 'many-thai-buddhas', 'stream-with-trees', 'three-bodhi-leaves') ?>
+    <?php $pics = [['bodhi-leaf', 'right'], ['three-bodhi-leaves', 'left']] ?>
     <?php $start = intval(date('H')) % sizeof($pics) ?>
     <!-- Indicators -->
     <ol class="carousel-indicators">
@@ -27,14 +27,14 @@ get_header(); ?>
     <div class="carousel-inner" role="listbox">
       <?php foreach($pics as $index => $pic): ?>
         <div class="item<?= $index == 0 ? ' active' : '' ?>">
-        <img class="first-slide" src="<?= get_image_path() ?>/carousel/<?= $pic ?>.jpg" alt="Slide <?= $index ?>">
+        <img class="first-slide" src="<?= get_image_path() ?>/carousel/<?= $pic[0] ?>.jpg" alt="Slide <?= $index ?>">
           <div class="container">
-            <div class="carousel-caption">
+          <div class="carousel-caption carousel-caption-<?= $pic[1] ?>">
               <pre>Don't chase the past
       Or long for the future.
   The past is behind;
       The future is not yet reached.</pre>
-<b>The Buddha</b>
+<span>The Buddha</span>
             </div>
           </div>
         </div><!-- /.item -->

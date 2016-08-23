@@ -24,7 +24,7 @@
             <?php foreach($elems as $text => $spec): ?>
               <li>
                 <a href="<?= $spec[1] ?>">
-                  <?= read_svg_file($spec[0]) ?>
+                  <?= read_svg_file($spec[0], ['icon-large']) ?>
                   <?= $text ?>
                 </a>
               </li>
