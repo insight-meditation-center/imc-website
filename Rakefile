@@ -28,7 +28,7 @@ prod_theme_dir = '/var/lib/wordpress/wp-content/themes/'
 desc "Upload the #{theme_dir} theme to the production server"
 task :upload_theme do
   puts "Uploading the #{theme_dir} directory to #{prod_server}"
-  exec_command("rsync -avz #{theme_dir} #{prod_server}:#{prod_theme_dir}")
+  exec_command("rsync --exclude=\"*.swp\" -avz #{theme_dir} #{prod_server}:#{prod_theme_dir}")
 end
 
 def exec_command(cmd)
