@@ -35,7 +35,7 @@
 
 			<div class="collapse navbar-collapse">
 				<ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><?= read_svg_file('linea/basic_helm') ?> Donate</a></li>
+        <li><a href="#">Donate</a></li>
 				</ul>
 				<form class="navbar-form navbar-right" role="search">
 					<div class="form-group">
