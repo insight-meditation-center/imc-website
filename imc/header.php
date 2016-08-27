@@ -21,7 +21,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-  <nav class="navbar navbar-default navbar-top">
+  <nav id="navbar-site" class="navbar navbar-default">
     <div class="container">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#primary-menu-collapse" aria-expanded="false">
