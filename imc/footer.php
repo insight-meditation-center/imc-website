@@ -39,7 +39,7 @@
 					dynamic_sidebar( 'footer_widgets' );
 				} ?>
         <div id="nav_menu-10" class="widget col-md-2 col-sm-6 widget_nav_menu">
-        <h4 class="widget-title"><?= read_svg_file('linea/basic_signs') ?> Address</h4>
+        <h4 class="widget-title"><?= read_svg_file('linea/basic_signs', ['icon']) ?>Address</h4>
           <address class="menu-footer-address-container">
             <ul id="menu-footer-address" class="menu">
               <li id="menu-item-63" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-63">
