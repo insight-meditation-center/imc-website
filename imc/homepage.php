@@ -115,12 +115,12 @@ get_header(); ?>
           <li><a href="#">Bibliodharma: Reading the Dharma</a></li>
         </ul>     </div><!-- /.col-md-4 -->
     </div><!-- /.row -->
-    <div id="learnmore" class="row">
+    <div id="learnmore" class="row setoff">
       <div class="col-md-1 col-md-offset-1">
         <img class="img-responsive" src="<?= get_image_path() ?>/inclusion.png" />
       </div>
       <div class="col-md-9">
-        <h4>We welcome equally people of all cultural, ethnic, and religious backgrounds, racial identities, socio-economic class, sexual orientation, gender identity, age, education, and physical ability.</h4>
+        <p class="lead">We welcome equally people of all cultural, ethnic, and religious backgrounds, racial identities, socio-economic class, sexual orientation, gender identity, age, education, and physical ability.</p>
       </div>
     </div>
   </div><!-- /.container -->
