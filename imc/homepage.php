@@ -65,6 +65,7 @@ get_header(); ?>
           <li><a href="#">Jul 20: Gil Fronsdal - Dharmette: Content vs process</a></li>
           <li><a href="#">Jul 20: Gil Fronsdal - Practice notes: Thinking as Scenery</a></li>
         </ul>
+        <h4><a href="http://www.audiodharma.org">View all talks</a></h4>
       </div><!-- /.col-md-4 -->
       <div class="col-md-4">
         <h4 class="calendar">Calendar <a class="small" href="#">(see complete calendar)</a></h4>
