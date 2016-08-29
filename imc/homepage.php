@@ -120,7 +120,7 @@ get_header(); ?>
         <img class="img-responsive" src="<?= get_image_path() ?>/inclusion.png" />
       </div>
       <div class="col-md-9">
-        <p class="lead">We welcome equally people of all cultural, ethnic, and religious backgrounds, racial identities, socio-economic class, sexual orientation, gender identity, age, education, and physical ability.</p>
+        <p class="lead">We welcome equally people of all cultural, ethnic, and religious backgrounds, racial identities, socio-economic class, sexual orientation, gender, identity, age, education, and physical ability.</p>
       </div>
     </div>
   </div><!-- /.container -->
