@@ -40,7 +40,7 @@ get_header(); ?>
     <div class="row">
       <div class="col-md-4">
         <h4>Everyone Welcome <a class="small" href="#learnmore">(learn more)</a></h4>
-        <img class="img-responsive" alt="Buddha smiling" src="<?= get_image_path() ?>/gils-buddha.jpg" />
+        <img class="img-responsive" alt="Buddha smiling" src="<?= get_image_path() ?>/buddha.jpg" />
       </div><!-- /.col-md-4 -->
       <div class="col-md-4">
         <h4>Noteworthy:</h4>
