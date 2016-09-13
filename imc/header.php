@@ -30,7 +30,8 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?= read_svg_file('leaf') ?> <?php bloginfo('name') ?></a>
+        <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>"><img alt="Buddha smiling" src="<?= get_image_path() ?>/bodhi-leaf.png" /><?php bloginfo('name') ?></a>
+        
       </div>
 
 			<div class="collapse navbar-collapse">
