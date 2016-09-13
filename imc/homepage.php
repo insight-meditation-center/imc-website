@@ -110,14 +110,15 @@ get_header(); ?>
           <li><a href="#">Bibliodharma: Reading the Dharma</a></li>
         </ul>     </div><!-- /.col-md-4 -->
     </div><!-- /.row -->
-    <div id="learnmore" class="row setoff">
-      <div class="col-md-1 col-md-offset-1">
-        <img class="img-responsive" src="<?= get_image_path() ?>/inclusion.png" />
-      </div>
-      <div class="col-md-9">
-        <p class="lead">We welcome equally people of all cultural, ethnic, and religious backgrounds, racial identities, socio-economic class, sexual orientation, gender, identity, age, education, and physical ability.</p>
-      </div>
-    </div>
   </div><!-- /.container -->
+  <div id="learnmore" class="jumbotron">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-9 col-md-offset-1">
+          <p>We welcome equally people of all cultural, ethnic, and religious backgrounds, racial identities, socio-economic class, sexual orientation, gender, identity, age, education, and physical ability.</p>
+        </div>
+      </div><!-- /.row -->
+    </div><!-- /.container -->
+  </div><!-- /#learnmore -->
 
 <?php get_footer(); ?>
