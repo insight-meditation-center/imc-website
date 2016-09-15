@@ -17,41 +17,7 @@ get_header(); ?>
 	<div class="container">
 		<div class="row">
 
-      <div class="col-md-3" role="complementary">
-        <nav class="sidebar">
-          <ul class="list-unstyled">
-            <li class="active">
-              <a href="#nocostnoregistration">No Cost - No Registration</a>
-            </li>
-            <li>
-              <a href="#programsforbeginners">Programs for Beginners</a>
-            </li>
-            <li>
-              <a href="#daylongmeditationretreats">Daylong Meditation Retreats</a>
-            </li>
-            <li>
-              <a href="#daylongteachings">Daylong Teachings</a>
-            </li>
-            <li>
-              <a href="#yearlongtrainings">Year-long Trainings</a>
-            </li>
-            <li>
-              <a href="#nonresidentialretreats">Non-residential retreats</a>
-            </li>
-            <li>
-              <a href="#residentialretreats">Residential Retreats</a>
-            </li>
-            <li>
-              <a href="#youthandfamilyprograms">Youth and Family Programs</a>
-            </li>
-            <li>
-              <a href="#saticenter">Sati Center</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-
-			<main id="main" class="site-main col-md-9 col-sm-8" role="main">
+			<main id="main" class="site-main col-md-10 col-md-offset-1" role="main">
 
         <?php get_sidebar(); ?>
 
@@ -66,6 +32,6 @@ get_header(); ?>
 			</main><!-- #main -->
 			
 		</div><!-- /.row -->
-	</div><!-- /.container-fluid -->
+	</div><!-- /.container -->
 
 <?php get_footer(); ?>
