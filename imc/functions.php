@@ -113,8 +113,17 @@ function imc_widgets_init() {
 		'after_title'   => '</h3>',
 	));
 	register_sidebar(array(
-		'name'          => esc_html__( 'Footer', 'imc' ),
-		'id'            => 'footer_widgets',
+		'name'          => esc_html__( 'Footer 1st Row', 'imc' ),
+		'id'            => 'footer_widget_1',
+		'description'   => '',
+		'before_widget' => '<div id="%1$s" class="widget col-md-2 col-sm-6 %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h4 class="widget-title">',
+		'after_title'   => '</h4>',
+	));
+	register_sidebar(array(
+		'name'          => esc_html__( 'Footer 2nd Row', 'imc' ),
+		'id'            => 'footer_widget_2',
 		'description'   => '',
 		'before_widget' => '<div id="%1$s" class="widget col-md-2 col-sm-6 %2$s">',
 		'after_widget'  => '</div>',
