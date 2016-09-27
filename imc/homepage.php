@@ -37,7 +37,7 @@ get_header(); ?>
   </div><!-- /.carousel -->
 
   <div class="container">
-    <div class="row">
+    <div class="row separator-bottom">
       <div class="col-md-4">
         <h4>Everyone Welcome <a class="small" href="#learnmore">(learn more)</a></h4>
         <img class="img-responsive" alt="Buddha smiling" src="<?= get_image_path() ?>/buddha.jpg" />
@@ -66,7 +66,7 @@ get_header(); ?>
         <iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=AGENDA&amp;height=400&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=imc.events.mgs%40gmail.com&amp;src=6fi0sc1ud24qjof96vc5kvmtd8%40group.calendar.google.com&amp;color=%232952A3&amp;ctz=America%2FLos_Angeles" style=" border-width:0 " scrolling="no" frameborder="0" height="400" width="!00%"></iframe>
       </div><!-- /.col-md-4 -->
     </div><!-- /.row -->
-    <div class="row">
+    <div class="row separator-bottom-no-margin">
       <div class="col-md-4">
         <h4>How To Start With Mindfulness</h4>
         <ul>
