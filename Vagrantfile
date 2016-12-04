@@ -96,6 +96,7 @@ Vagrant.configure(2) do |config|
 
       echo "Setting up Apache."
       cp /vagrant/000-default.conf /etc/apache2/sites-available/000-default.conf
+      cp /vagrant/ports.conf /etc/apache2/ports.conf
       a2enmod rewrite && a2enmod vhost_alias && /etc/init.d/apache2 restart
       service apache2 restart
 
