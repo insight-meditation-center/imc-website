@@ -6,9 +6,9 @@ theme_asset_css_dir = theme_asset_dir + '/css'
 theme_asset_js_dir = theme_asset_dir + '/js'
 imc_bootstrap_sass_dir = 'imc-bootstrap-sass'
 
-desc 'Dump the local DB to the seed-db.sql file.'
+desc 'Dump the local DB to the ./db/seed-db.sql file.'
 task :dump_db do |t|
-  exec_command('mysqldump -u root -ppassword --add-drop-table imc_wordpress > /vagrant/seed-db.sql 2>/dev/null')
+  exec_command('docker-compose exec mysql sh -c "exec mysqldump --all-databases -uroot -ppassword" > db/seed-db.sql')
 end
 
 desc 'Compile necessary assets and copy them to js/.'
