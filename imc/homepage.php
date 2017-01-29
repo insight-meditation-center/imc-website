@@ -39,8 +39,22 @@ get_header(); ?>
   <div class="container">
     <div class="row separator-bottom">
       <div class="col-md-4">
-        <h4>Everyone Welcome <a class="small" href="#learnmore">(learn more)</a></h4>
-        <img class="img-responsive" alt="Buddha smiling" src="<?= get_image_path() ?>/buddha.jpg" />
+        <h4>How To Start With Mindfulness</h4>
+        <ul>
+          <li>The Basic Idea: <a href="#">The Practice of Mindfulness</a> <a href="#">(Audio)</a></li>
+          <li><a href="#">Beginning at IMC</a></li>
+          <li>
+            Beginning on Your Own
+            <ul>
+              <li><a href="#">Mindfulness Meditation as Buddhist Practice</a> <a href="#">(Audio)</a></li>
+              <li><a href="#">Brief Instructions in Sitting Meditation</a> <a href="#">(Audio)</a></li>
+              <li><a href="#">Concentration and Relaxation</a></li>
+              <li><a href="#">Posture instructions</a> <a href="#">(Video)</a></li>
+              <li>Longer Audio Instructions <a href="#">(44 minute audio)</a></li>
+              <li>Read Gil Fronsdal’s <a href="#">The Issue at Hand</a></li>
+            </ul>
+          </li>
+        </uL>
       </div><!-- /.col-md-4 -->
       <div class="col-md-4">
         <h4>Noteworthy:</h4>
@@ -67,25 +81,7 @@ get_header(); ?>
       </div><!-- /.col-md-4 -->
     </div><!-- /.row -->
     <div class="row separator-bottom-no-margin">
-      <div class="col-md-4">
-        <h4>How To Start With Mindfulness</h4>
-        <ul>
-          <li>The Basic Idea: <a href="#">The Practice of Mindfulness</a> <a href="#">(Audio)</a></li>
-          <li><a href="#">Beginning at IMC</a></li>
-          <li>
-            Beginning on Your Own
-            <ul>
-              <li><a href="#">Mindfulness Meditation as Buddhist Practice</a> <a href="#">(Audio)</a></li>
-              <li><a href="#">Brief Instructions in Sitting Meditation</a> <a href="#">(Audio)</a></li>
-              <li><a href="#">Concentration and Relaxation</a></li>
-              <li><a href="#">Posture instructions</a> <a href="#">(Video)</a></li>
-              <li>Longer Audio Instructions <a href="#">(44 minute audio)</a></li>
-              <li>Read Gil Fronsdal’s <a href="#">The Issue at Hand</a></li>
-            </ul>
-          </li>
-        </uL>
-      </div><!-- /.col-md-4 -->
-      <div class="col-md-4">
+      <div class="col-md-4 col-md-offset-2">
         <h4>Ongoing Support</h4>
         <ul>
           <li><a href="#">For newcomers to IMC</a></li>
