@@ -16,12 +16,12 @@
 get_header(); ?>
 
   <div id="heroCarousel" class="carousel slide" data-ride="carousel" data-interval="30000">
-    <?php $pics = [['three-bodhi-leaves', 'left']] ?>
+    <?php $pics = [['wooden-buddha', 'left']] ?>
     <?php $start = intval(date('H')) % sizeof($pics) ?>
     <div class="carousel-inner" role="listbox">
       <?php foreach($pics as $index => $pic): ?>
         <div class="item<?= $index == 0 ? ' active' : '' ?>">
-        <img class="first-slide" src="<?= get_image_path() ?>/carousel/<?= $pic[0] ?>.jpg" alt="Slide <?= $index ?>">
+        <img class="first-slide" src="<?= get_image_path() ?>/<?= $pic[0] ?>.jpg" alt="Slide <?= $index ?>">
           <div class="container">
             <a href="#" class="carousel-caption carousel-caption-<?= $pic[1] ?>">
               <pre>Don't chase the past
