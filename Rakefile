@@ -24,11 +24,13 @@ task :build_assets do
 end
 
 prod_server = 'insightmeditationcenter.org'
-prod_theme_dir = '/var/lib/wordpress/wp-content/themes/'
-desc "Upload the #{theme_dir} theme to the production server"
-task :upload_theme do
-  puts "Uploading the #{theme_dir} directory to #{prod_server}"
-  exec_command("rsync --exclude=\"*.swp\" -avz #{theme_dir} #{prod_server}:#{prod_theme_dir}")
+{test: '/var/lib/wordpress/wp-content/themes/imc/',
+ staging: '/var/www/imc_staging/www/site/wp-content/themes/imc_wordpress_theme/'}.each do |fabric, prod_theme_dir|
+  desc "Upload the #{theme_dir} theme to #{fabric}"
+  task "upload_theme_#{fabric}".to_sym do
+    puts "Uploading the #{theme_dir} theme to #{fabric}"
+    exec_command("rsync --exclude=\"*.swp\" -avz #{theme_dir}/ #{prod_server}:#{prod_theme_dir}")
+  end
 end
 
 def exec_command(cmd)
