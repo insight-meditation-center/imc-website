@@ -24,11 +24,12 @@ get_header(); ?>
         <img class="first-slide" src="<?= get_image_path() ?>/<?= $pic[0] ?>.jpg" alt="Slide <?= $index ?>">
           <div class="container">
             <a href="#" class="carousel-caption carousel-caption-<?= $pic[1] ?>">
-              <pre>Don't chase the past
-      Or long for the future.
-  The past is behind;
-      The future is not yet reached.</pre>
-              <span>- The Buddha</span>
+              <pre>All experience is preceded by mind,
+     led by mind,
+     made by mind.
+Speak or act with a peaceful mind, and happiness follows
+     like a never-departing shadow.
+          — Dhammapada</pre>
             </a>
           </div>
         </div><!-- /.item -->
