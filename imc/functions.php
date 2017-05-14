@@ -140,6 +140,7 @@ function imc_scripts() {
 	wp_enqueue_style( 'imc-bootstrap', get_template_directory_uri() . '/assets/css/bootstrap.css');
 	wp_enqueue_style( 'imc-css', get_template_directory_uri() . '/assets/css/imc.css');
 	wp_enqueue_style( 'imc-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css?family=Marck+Script|Mukta+Vaani');
 
 	wp_enqueue_script( 'imc-jquery', get_template_directory_uri() . '/assets/js/jquery-1.11.3.min.js', array(), '', false );
 	wp_enqueue_script( 'imc-bootstrap', get_template_directory_uri() . '/assets/js/bootstrap.js', array(), '', true );
@@ -190,6 +191,7 @@ require get_template_directory() . '/inc/customizer.php';
  */
 require get_template_directory() . '/inc/jetpack.php';
 
+remove_filter('the_content', 'wpautop');
 
 //function to call first uploaded image in functions file
 function article_first_image() {
