@@ -13,6 +13,7 @@ imc/assets/css/bootstrap.css
 imc/assets/css/bootstrap-theme.css
 imc/assets/css/imc.css
 imc/assets/js/bootstrap.min.js
+imc/assets/fonts/bootstrap
 
 # OS X
 *.DS_Store

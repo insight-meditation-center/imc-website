@@ -4,6 +4,7 @@ theme_dir = 'imc'
 theme_asset_dir = theme_dir + '/assets'
 theme_asset_css_dir = theme_asset_dir + '/css'
 theme_asset_js_dir = theme_asset_dir + '/js'
+theme_asset_fonts_dir = theme_asset_dir + '/fonts'
 imc_bootstrap_sass_dir = 'imc-bootstrap-sass'
 
 desc 'Dump the local DB to the ./db/seed-db.sql file.'
@@ -21,6 +22,9 @@ task :build_assets do
 
   puts "Copying JS to #{theme_asset_js_dir}".blue.bold
   exec_command("mkdir -p #{theme_asset_js_dir} && cp #{imc_bootstrap_sass_dir}/assets/javascripts/bootstrap.min.js #{theme_asset_js_dir}")
+
+  puts "Copying fonts to #{theme_asset_fonts_dir}".blue.bold
+  exec_command("mkdir -p #{theme_asset_fonts_dir} && cp -rf #{imc_bootstrap_sass_dir}/assets/fonts/bootstrap #{theme_asset_fonts_dir}")
 end
 
 prod_server = 'insightmeditationcenter.org'
