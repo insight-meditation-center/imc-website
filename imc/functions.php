@@ -107,8 +107,8 @@ function imc_widgets_init() {
 		'name'          => esc_html__( 'Sidebar', 'imc' ),
 		'id'            => 'sidebar-1',
 		'description'   => '',
-		'before_widget' => '<div id="%1$s" class="widget col-md-4 %2$s">',
-		'after_widget'  => '</div>',
+		'before_widget' => '<aside id="%1$s" class="widget col-md-4 %2$s">',
+		'after_widget'  => '</aside>',
 		'before_title'  => '<h3>',
 		'after_title'   => '</h3>',
 	));
