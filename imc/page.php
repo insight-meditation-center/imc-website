@@ -17,9 +17,9 @@ get_header(); ?>
 	<div class="container">
 		<div class="row">
 
-			<main id="main" class="site-main col-md-10 col-md-offset-1" role="main">
+      <?php get_sidebar(); ?>
 
-        <?php get_sidebar(); ?>
+			<main id="main" class="site-main col-md-7 col-md-offset-1" role="main">
 
 				<?php
 				while ( have_posts() ) : the_post();
