@@ -51,7 +51,7 @@ get_header(); ?>
         </nav>
       </div>
 
-			<main id="main" class="site-main col-md-9 col-sm-8" role="main">
+			<main id="main" class="site-main col-md-8" role="main">
 
         <?php get_sidebar(); ?>
 
